@@ -1,0 +1,26 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0000002e;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid  #0098ffe6;
+    border-radius: 5px;
+    outline: none;
+}
+
+.mainContainer{
+    padding: 20px;
+}
+
+button.formButton {
+    width: 7rem;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #00800087;
+}
