@@ -23,4 +23,6 @@ button.formButton {
     padding: 12px;
     border-radius: 5px;
     background-color: #00800087;
+    border: none;
+    color: white;
 }

@@ -7,7 +7,7 @@ const UserItem = (props) => {
         <div className='detailsContainer'>
             <div>{props.title}</div>
             <button className='deleteInfo'>
-					Delete
+					Remove
 				</button>
         </div>
     </div>

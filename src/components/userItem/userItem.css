@@ -3,4 +3,13 @@
     justify-content: space-between;
     padding: 20px;
     border: 1px solid #0000002e;
+    border-radius: 7px;
+}
+
+.deleteInfo {
+    padding: 7px 30px 7px 30px;
+    background-color: #ff0000c2;
+    border-radius: 9px;
+    border: none;
+    color: white;
 }
