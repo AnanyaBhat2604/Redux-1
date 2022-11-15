@@ -1,12 +1,19 @@
 import './userItem.css'
+import { deleteUserDetailsAsync } from '../redux/userDetailsSlice';
+import { useDispatch } from 'react-redux';
 
 const UserItem = (props) => {
-    console.log(props);
+  const dispatch = useDispatch();
+
+  const handleDeleteClick = () => {
+      dispatch(deleteUserDetailsAsync({id:props.id}))
+  }
+
   return (
     <div>
         <div className='detailsContainer'>
             <div>{props.title}</div>
-            <button className='deleteInfo'>
+            <button className='deleteInfo' onClick={handleDeleteClick}>
 					Remove
 				</button>
         </div>

@@ -1,34 +1,24 @@
-import './usersList.css'
+import './usersList.css';
+import { useEffect } from 'react';
 import UserItem from '../userItem/userItem';
+import { useSelector, useDispatch } from 'react-redux';
+import { getUserDetailsAsync, deleteUserDetailsAsync } from '../redux/userDetailsSlice';
 
 const UsersList = () => {
-    let users = [
-        {
-            id: 1,
-            name: 'aaa',
-        },
-        {
-            id: 2,
-            name: 'bbb',
-        },
-        {
-            id: 3,
-            name: 'ccc',
-        },
-        {
-            id: 4,
-            name: 'he',
-        },
-        {
-            id: 5,
-            name: 'eee',
-        },
-    ];
+    const dispatch = useDispatch();
+        
+    const userDetails = useSelector((state) => state.userDetails)
+
+    useEffect(() => {
+        dispatch(getUserDetailsAsync());
+        
+      }, [dispatch]);
+    
   return (
     <div className='listContainer'>
         <ul className='list-group'>
-			{users.map((user) => (
-				<UserItem id={user.id} title={user.name} />
+              {userDetails.map((user) => (
+				<UserItem id={user.id} title={user.title} />
 			))}
 		</ul>
     </div>
