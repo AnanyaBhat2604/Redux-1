@@ -44,16 +44,6 @@ const userDetailsSlice = createSlice({
   ],
       
   reducers: {
-    addUserDetails: (state, action) => {
-      const newUserDetails = {
-        id: Date.now(),
-        title: action.payload.title,
-      };
-      state.push(newUserDetails);
-    },
-    deleteUserDetails: (state, action) => {
-      return state.filter((userDetails) => userDetails.id !== action.payload.id);
-    }
   },
   extraReducers:{
     [getUserDetailsAsync.pending]:(state, action) => {

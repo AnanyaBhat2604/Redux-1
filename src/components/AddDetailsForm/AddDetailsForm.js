@@ -10,9 +10,15 @@ const AddDetailsForm = () => {
     const onSubmit = (event) => {
 		event.preventDefault();
         // console.log(event.target.inputField.value);
-		dispatch(addUserDetailsAsync({
-			title: value,
-		}))
+		if (value!==""){
+			dispatch(addUserDetailsAsync({
+				title: value,
+			}))
+		}
+		else{
+			alert("Enter the necessary field!")
+		}
+		
 		
 	};
   return (

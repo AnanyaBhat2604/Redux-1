@@ -13,9 +13,9 @@ const UserItem = (props) => {
     <div>
         <div className='detailsContainer'>
             <div>{props.title}</div>
-            <button className='deleteInfo' onClick={handleDeleteClick}>
+            <div><button className='deleteInfo' onClick={handleDeleteClick}>
 					Remove
-				</button>
+				</button></div>
         </div>
     </div>
   )
